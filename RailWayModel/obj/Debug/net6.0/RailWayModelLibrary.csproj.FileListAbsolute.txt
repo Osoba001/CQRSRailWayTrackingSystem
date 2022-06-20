@@ -1,0 +1,12 @@
+C:\Users\dell\Desktop\RailWayCleanArchitecture\RailWayTractingSystem\RailWayModel\bin\Debug\net6.0\RailWayModelLibrary.deps.json
+C:\Users\dell\Desktop\RailWayCleanArchitecture\RailWayTractingSystem\RailWayModel\bin\Debug\net6.0\RailWayModelLibrary.dll
+C:\Users\dell\Desktop\RailWayCleanArchitecture\RailWayTractingSystem\RailWayModel\bin\Debug\net6.0\RailWayModelLibrary.pdb
+C:\Users\dell\Desktop\RailWayCleanArchitecture\RailWayTractingSystem\RailWayModel\obj\Debug\net6.0\RailWayModelLibrary.csproj.AssemblyReference.cache
+C:\Users\dell\Desktop\RailWayCleanArchitecture\RailWayTractingSystem\RailWayModel\obj\Debug\net6.0\RailWayModelLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dell\Desktop\RailWayCleanArchitecture\RailWayTractingSystem\RailWayModel\obj\Debug\net6.0\RailWayModelLibrary.AssemblyInfoInputs.cache
+C:\Users\dell\Desktop\RailWayCleanArchitecture\RailWayTractingSystem\RailWayModel\obj\Debug\net6.0\RailWayModelLibrary.AssemblyInfo.cs
+C:\Users\dell\Desktop\RailWayCleanArchitecture\RailWayTractingSystem\RailWayModel\obj\Debug\net6.0\RailWayModelLibrary.csproj.CoreCompileInputs.cache
+C:\Users\dell\Desktop\RailWayCleanArchitecture\RailWayTractingSystem\RailWayModel\obj\Debug\net6.0\RailWayModelLibrary.dll
+C:\Users\dell\Desktop\RailWayCleanArchitecture\RailWayTractingSystem\RailWayModel\obj\Debug\net6.0\refint\RailWayModelLibrary.dll
+C:\Users\dell\Desktop\RailWayCleanArchitecture\RailWayTractingSystem\RailWayModel\obj\Debug\net6.0\RailWayModelLibrary.pdb
+C:\Users\dell\Desktop\RailWayCleanArchitecture\RailWayTractingSystem\RailWayModel\obj\Debug\net6.0\ref\RailWayModelLibrary.dll
