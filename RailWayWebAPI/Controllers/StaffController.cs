@@ -19,11 +19,12 @@ namespace RailWayWebAPI.Controllers
          }
          [HttpPost]
          [Authorize(Policy="AdminOnly")]
+        [AllowAnonymous]
         public async Task<IActionResult> CreateStaff([FromBody] CreateStaff staff)
         {
             return Ok(await mediator.Send(staff));
         }
-        [HttpGet("Login")]
+        [HttpPost("Login")]
         [AllowAnonymous]
         public async Task<IActionResult> Login([FromBody] LoginStaff staff)
         {

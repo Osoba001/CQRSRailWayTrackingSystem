@@ -21,7 +21,8 @@ public class Encription: IEscription
         using (var hmc=new HMACSHA512(PasswordSalt))
         {
             var computed=hmc.ComputeHash(Encoding.UTF8.GetBytes(password));
-            return computed.Equals(PasswordSalt);
+           return computed.SequenceEqual(PasswordHash);
+     
         }
     }
 }

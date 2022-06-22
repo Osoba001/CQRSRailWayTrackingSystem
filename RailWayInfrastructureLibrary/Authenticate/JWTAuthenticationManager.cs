@@ -36,7 +36,7 @@ namespace RailWayInfrastructureLibrary.Utility
                  new Claim(ClaimTypes.NameIdentifier,staff.Id.ToString()),
                  new Claim(ClaimTypes.Name, staff.Name),
                  new Claim(ClaimTypes.Email, staff.Email),
-                 new Claim(ClaimTypes.Email, staff.Email),
+                 new Claim(ClaimTypes.Role,staff.Role),
                  new Claim("StaffId",staff.StaffId)
             };
 

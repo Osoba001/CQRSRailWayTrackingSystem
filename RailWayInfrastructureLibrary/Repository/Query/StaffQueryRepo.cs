@@ -26,7 +26,7 @@ namespace RailWayInfrastructureLibrary.Repository.Query
             string msg= "user email or password is not valid";
             bool IsSucess = false;
             Staff _staff=new();
-            var s = context.Set<Staff>().FirstOrDefault(x => x.Email.ToLower() == email.ToLower());
+            var s = context.Set<Staff>().FirstOrDefault(x => x.Email == email);
             if (s != null)
             {
                 IsSucess = escription.VerifyPassword(password, s.PasswordHash, s.PasswordSalt);
