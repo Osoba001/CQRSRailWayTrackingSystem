@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RailWayInfrastructureLibrary.Utility;
 
-public class Encrption:IHashPassword,IVerifyPassword
+public class Encription: IEscription
 {
     public  Tuple<byte[], byte[]> CreateHashPassword(string password)
     {

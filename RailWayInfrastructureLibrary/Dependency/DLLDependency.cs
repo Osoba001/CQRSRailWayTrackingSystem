@@ -2,6 +2,7 @@
 using RailWayAppLibrary.Utility;
 using RailWayInfrastructureLibrary.Repository.Command;
 using RailWayInfrastructureLibrary.Repository.Query;
+using RailWayInfrastructureLibrary.Utility;
 using RailWayModelLibrary.Repositories.Command;
 using RailWayModelLibrary.Repositories.Query;
 using System;
@@ -31,7 +32,7 @@ namespace RailWayInfrastructureLibrary.Dependency
             services.AddScoped<IStationQueryRepo, StationQueryRepo>();
             services.AddScoped<ITrackQueryRepo, TrackQueryRepo>();
             services.AddScoped<ITrainQueryRepo, TrainQueryRepo>();
-            services.AddScoped<IAuthenticationManager, JWTAuthenticationManager>();
+            services.AddScoped< IEscription, Encription>();
             return services;
         }
     }

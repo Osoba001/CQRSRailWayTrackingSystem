@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RailWayAppLibrary.Commands;
@@ -8,6 +9,7 @@ namespace RailWayWebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class TrainController : ControllerBase
     {
         private readonly IMediator mediator; 
@@ -16,18 +18,21 @@ namespace RailWayWebAPI.Controllers
             this.mediator = mediator;
         }
         [HttpPost]
+        [Authorize(Roles ="Admin")]
         public async Task<IActionResult> Post([FromBody] CreateTrain train)
         {
             return Ok(await mediator.Send(request: train));
         }
 
         [HttpPut("SendDelay")]
+        [Authorize(Roles ="TrainEngineer")]
         public async Task<IActionResult> SendDelay(Guid id,TimeSpan delay)
         {
             return Ok( await mediator.Send(request: new SendTrainDelay(id, delay)));
         }
 
         [HttpPut("DepartFromStation")]
+        [Authorize(Roles = "TrainEngineer")]
         public async Task<IActionResult> DepartFromStation(Guid id)
         {
             return Ok(await mediator.Send(request: new DepartStation(id)));
@@ -45,6 +50,7 @@ namespace RailWayWebAPI.Controllers
         }
 
         [HttpPut("EndTrip")]
+        [Authorize(Roles = "TrainEngineer")]
         public async Task<IActionResult> EndTrip(Guid trainId)
         {
             return Ok(await mediator.Send(request: new EndTrip(trainId)));

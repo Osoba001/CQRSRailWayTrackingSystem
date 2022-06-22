@@ -3,10 +3,10 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using RailWayAppLibrary.Utility;
+using RailWayInfrastructureLibrary.Authenticate;
 using RailWayInfrastructureLibrary.Data;
 using RailWayInfrastructureLibrary.Dependency;
-using RailWayWebAPI.Controllers;
-using System.Reflection;
+using RailWayInfrastructureLibrary.Utility;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -40,7 +40,25 @@ builder.Services.AddAuthentication(x =>
            ValidateIssuer = false,
        };
    });
-builder.Services.AddSingleton<JWTAuthenticationManager>(new JWTAuthenticationManager(key));
+builder.Services.AddSingleton<IAuthenticationManager>(new JWTAuthenticationManager(key));
+
+builder.Services.AddAuthorization(opt =>
+{
+    opt.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
+    opt.AddPolicy("AdminAndAccountant", policy => policy.RequireAssertion(context =>
+                  context.User.IsInRole("Admin") || context.User.IsInRole("Accountant")));
+    opt.AddPolicy("AdminAndTrainEngineerOnly", policy => policy.RequireAssertion(context =>
+                  context.User.IsInRole("TrainEngineer") || context.User.IsInRole("Admin")));
+    opt.AddPolicy("AdminAndStationAdmin", policy => policy.RequireAssertion(context =>
+                  context.User.IsInRole("TrainEngineer") || context.User.IsInRole("Admin")));
+    opt.AddPolicy("AdultOnly", policy => policy.RequireClaim("Email")
+                .Requirements.Add(new AdultRequirement(18)));
+    opt.AddPolicy("AdminTrainEngineerAndStationAdminOnly", policy => policy.RequireAssertion(context =>
+                  context.User.IsInRole("TrainEngineer") || context.User.IsInRole("Admin")
+                  && context.User.IsInRole("Passenger")));
+    opt.AddPolicy("AdminAndPassenger", policy => policy.RequireAssertion(context =>
+                  context.User.IsInRole("Admin") || context.User.IsInRole("Passenger")));
+});
  
 var AllowSpecificOrigin = "_allowspecificOrigin";
 builder.Services.AddCors(option =>

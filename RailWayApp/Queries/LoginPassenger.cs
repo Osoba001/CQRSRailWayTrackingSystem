@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using RailWayAppLibrary.Response;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,5 @@ using System.Threading.Tasks;
 
 namespace RailWayAppLibrary.Queries
 {
-    public record Login(string email, string password):IRequest<string>;
-    
+    public record LoginPassenger(string email, string password):IRequest<PassengerResponse>;
 }

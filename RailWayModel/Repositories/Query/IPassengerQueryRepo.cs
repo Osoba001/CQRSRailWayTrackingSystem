@@ -5,6 +5,6 @@ namespace RailWayModelLibrary.Repositories.Query
 {
     public interface IPassengerQueryRepo : IQueryRepo<Passenger>
     {
-        string Login(string email, string password);
+        Tuple<Passenger, bool, string> Login(string email, string password);
     }
 }

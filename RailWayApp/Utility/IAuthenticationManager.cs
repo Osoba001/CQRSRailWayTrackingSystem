@@ -1,7 +1,10 @@
-﻿namespace RailWayAppLibrary.Utility
+﻿using RailWayModelLibrary.Entities;
+
+namespace RailWayAppLibrary.Utility
 {
     public interface IAuthenticationManager
     {
-        string Authenticate(string name, string email, string role);
+        string AuthenticateStaff(Staff staff);
+        string AuthenticatePassenger(Passenger passenger);
     }
 }

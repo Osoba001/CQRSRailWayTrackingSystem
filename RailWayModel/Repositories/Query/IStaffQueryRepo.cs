@@ -5,6 +5,6 @@ namespace RailWayModelLibrary.Repositories.Query
 {
     public interface IStaffQueryRepo : IQueryRepo<Staff>
     {
-        Staff GetStaffByLogin(string email, string password);
+        Tuple<Staff, bool, string> Login(string email, string password);
     }
 }

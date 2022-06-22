@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace RailWayAppLibrary.Utility
 {
-    public interface IHashPassword
+    public interface IEscription
     {
+        bool VerifyPassword(string password, byte[] PasswordHash, byte[] PasswordSalt);
         Tuple<byte[], byte[]> CreateHashPassword(string password);
     }
 }

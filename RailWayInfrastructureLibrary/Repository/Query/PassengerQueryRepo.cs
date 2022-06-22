@@ -1,7 +1,6 @@
 ﻿using RailWayInfrastructureLibrary.Data;
 using RailWayInfrastructureLibrary.Repository.Query.Base;
 using RailWayModelLibrary.Entities;
-using static RailWayAppLibrary.Utility.Encrption;
 using RailWayModelLibrary.Repositories.Query;
 using RailWayAppLibrary.Utility;
 
@@ -11,39 +10,31 @@ namespace RailWayInfrastructureLibrary.Repository.Query
     {
         private readonly RailWayDbContext context;
         private readonly IAuthenticationManager authentication;
+        private readonly IEscription escription;
 
-        public PassengerQueryRepo(RailWayDbContext context, IAuthenticationManager authentication) : base(context)
+        public PassengerQueryRepo(RailWayDbContext context, IAuthenticationManager authentication, IEscription escription) : base(context)
         {
             this.context = context;
             this.authentication = authentication;
+            this.escription = escription;
         }
-        public string Login(string email, string password)
+        public Tuple<Passenger, bool, string> Login(string email, string password)
         {
-            var p =  context.Set<Passenger>().FirstOrDefault(x => x.Email.ToLower() == email.ToLower());
-            if (p != null)
+            string msg = "user email or password is not valid";
+            bool IsSucess = false;
+            Passenger _passenger = new();
+            var s = context.Set<Passenger>().FirstOrDefault(x => x.Email.ToLower() == email.ToLower());
+            if (s != null)
             {
-                if (VerifyPassword(password,p.PasswordHash,p.PasswordSalt))
+                IsSucess = escription.VerifyPassword(password, s.PasswordHash, s.PasswordSalt);
+                if (IsSucess)
                 {
-                    return authentication.Authenticate(p.Name, p.Email, "Passenger");
+                    msg = authentication.AuthenticatePassenger(s);
+                    _passenger = s;
                 }
-                else
-                {
-                    throw new Exception("user email or password is not valid");
-                }
-                
-            } 
-            else
-            {
-                var s = context.Set<Staff>().FirstOrDefault(x => x.Email.ToLower() == email.ToLower());
-                if (s!=null)
-                {
-                    return authentication.Authenticate(s.Name, s.Email, s.Role);
-                }
-                else
-                {
-                    throw new Exception("user email or password is not valid");
-                }
+
             }
+            return new Tuple<Passenger, bool, string>(_passenger, IsSucess, msg);
         }
       
     }

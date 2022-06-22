@@ -16,12 +16,7 @@ namespace RailWayWebAPI.Controllers
         {
             this.mediator = mediator;
         }
-        [HttpGet("Login")]
-        public async Task<IActionResult> Login([FromBody] Login login)
-        {
-            return Ok(await mediator.Send(request: login ));
-        }
-
+       
 
         [HttpPut("ChangePassword")]
         public async Task<IActionResult> ChangePassword([FromBody] ChangePassword login)

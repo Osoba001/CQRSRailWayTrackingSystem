@@ -10,6 +10,5 @@ namespace RailWayAppLibrary.Response
         public string? NOK_Name { get; set; }
         public string? NOK_Address { get; set; }
         public DateTime LastLogin { get; set; }
-
     }
 }

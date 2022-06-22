@@ -1,19 +1,21 @@
-﻿using RailWayInfrastructureLibrary.Data;
+﻿using RailWayAppLibrary.Utility;
+using RailWayInfrastructureLibrary.Data;
 using RailWayInfrastructureLibrary.Repository.Command.Base;
 using RailWayModelLibrary.Entities;
 using RailWayModelLibrary.RailWayEnums;
 using RailWayModelLibrary.Repositories.Command;
-using static RailWayAppLibrary.Utility.Encrption;
 
 namespace RailWayInfrastructureLibrary.Repository.Command
 {
     public class PassengerCommandRepo : CommandRepo<Passenger>, IPassengerCommandRepo
     {
         private readonly RailWayDbContext context;
+        private readonly IEscription escription;
 
-        public PassengerCommandRepo(RailWayDbContext context) : base(context)
+        public PassengerCommandRepo(RailWayDbContext context, IEscription escription) : base(context)
         {
             this.context = context;
+            this.escription = escription;
         }
 
         public async Task<bool> ChangePassword(string emal, string oldPassword, string newPassword)
@@ -21,9 +23,9 @@ namespace RailWayInfrastructureLibrary.Repository.Command
             var p = context.Set<Passenger>().FirstOrDefault(x => x.Email.ToLower() == emal.ToLower());
             if (p!=null)
             {
-                if (VerifyPassword(oldPassword, p.PasswordHash, p.PasswordSalt))
+                if (escription.VerifyPassword(oldPassword, p.PasswordHash, p.PasswordSalt))
                 {
-                    var newlogin = CreateHashPassword(newPassword);
+                    var newlogin = escription.CreateHashPassword(newPassword);
                     p.PasswordHash = newlogin.Item1;
                     p.PasswordSalt = newlogin.Item2;
                     context.Update(p);
@@ -37,9 +39,9 @@ namespace RailWayInfrastructureLibrary.Repository.Command
                 var s = context.Set<Staff>().FirstOrDefault(x => x.Email.ToLower() == emal.ToLower());
                 if (s!=null)
                 {
-                    if (VerifyPassword(oldPassword, s.PasswordHash, s.PasswordSalt))
+                    if (escription.VerifyPassword(oldPassword, s.PasswordHash, s.PasswordSalt))
                     {
-                        var newlogin = CreateHashPassword(newPassword);
+                        var newlogin = escription.CreateHashPassword(newPassword);
                         s.PasswordHash = newlogin.Item1;
                         s.PasswordSalt = newlogin.Item2;
                         context.Update(s);

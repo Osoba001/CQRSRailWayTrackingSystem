@@ -8,6 +8,7 @@ namespace RailWayWebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
     public class StationController : ControllerBase
     {
         private readonly IMediator mediator;
