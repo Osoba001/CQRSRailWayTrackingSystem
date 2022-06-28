@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RailWayModelLibrary", "Rail
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RailWayInfrastructureLibrary", "RailWayInfrastructureLibrary\RailWayInfrastructureLibrary.csproj", "{23776F58-D3C7-4083-9C5A-AB34F0EFAD70}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RailWayAppLibrary", "RailWayApp\RailWayAppLibrary.csproj", "{F8C0A035-FF49-49A5-B051-511880733864}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RailWayApp", "RailWayApp\RailWayApp.csproj", "{F8C0A035-FF49-49A5-B051-511880733864}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -7,6 +7,8 @@ using RailWayInfrastructureLibrary.Authenticate;
 using RailWayInfrastructureLibrary.Data;
 using RailWayInfrastructureLibrary.Dependency;
 using RailWayInfrastructureLibrary.Utility;
+using RailWayWebAPI.CustomMiddleware;
+using Serilog;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,7 +18,15 @@ builder.Services.AddDbContext<RailWayDbContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("defaultConnection"));
 });
+
+var logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
+    .Enrich.FromLogContext()
+    .CreateLogger();
+builder.Logging.ClearProviders();
+builder.Logging.AddSerilog(logger);
 builder.Services.AddControllers();
+//builder.Services.AddTransient<ExceptionHandlerMiddleware>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.Dependency();
 builder.Services.AddEndpointsApiExplorer();
@@ -29,18 +39,20 @@ builder.Services.AddAuthentication(x =>
 {
     x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-}).AddJwtBearer(x =>
+})
+    .AddJwtBearer(x =>
    {
-       x.RequireHttpsMetadata = false;
+       x.RequireHttpsMetadata = true;
        x.SaveToken = true;
        x.TokenValidationParameters = new TokenValidationParameters
        {
            ValidateIssuerSigningKey = true,
            IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(key)),
            ValidateIssuer = false,
+           ValidateAudience=false,
        };
    });
-builder.Services.AddSingleton<IAuthenticationManager>(new JWTAuthenticationManager(key));
+builder.Services.AddTransient<IAuthenticationManager>(x=> new JWTAuthenticationManager(key));
 
 builder.Services.AddAuthorization(opt =>
 {
@@ -79,8 +91,11 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+//app.UseRouting();
+//app.UseMiddleware<ExceptionHandlerMiddleware>();
 
 app.UseCors(AllowSpecificOrigin);
+
 
 app.UseAuthentication();
 

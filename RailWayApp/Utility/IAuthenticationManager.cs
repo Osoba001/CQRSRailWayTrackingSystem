@@ -1,4 +1,5 @@
 ﻿using RailWayModelLibrary.Entities;
+using System.Security.Claims;
 
 namespace RailWayAppLibrary.Utility
 {
@@ -6,5 +7,6 @@ namespace RailWayAppLibrary.Utility
     {
         string AuthenticateStaff(Staff staff);
         string AuthenticatePassenger(Passenger passenger);
+        ClaimsPrincipal VerifyToken(string token);
     }
 }

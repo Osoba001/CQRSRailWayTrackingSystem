@@ -722,6 +722,15 @@
           }
         }
       },
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
       "System.Buffers/4.5.0": {
         "type": "package",
         "compile": {
@@ -997,7 +1006,7 @@
           }
         }
       },
-      "RailWayAppLibrary/1.0.0": {
+      "RailWayApp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
@@ -1006,24 +1015,27 @@
           "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.1",
           "Microsoft.AspNetCore.Authentication": "2.2.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.6",
-          "RailWayModelLibrary": "1.0.0",
+          "RailWayModelL": "1.0.0",
           "System.IdentityModel.Tokens.Jwt": "6.19.0"
         },
         "compile": {
-          "bin/placeholder/RailWayAppLibrary.dll": {}
+          "bin/placeholder/RailWayApp.dll": {}
         },
         "runtime": {
-          "bin/placeholder/RailWayAppLibrary.dll": {}
+          "bin/placeholder/RailWayApp.dll": {}
         }
       },
-      "RailWayModelLibrary/1.0.0": {
+      "RailWayModelL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
         "compile": {
-          "bin/placeholder/RailWayModelLibrary.dll": {}
+          "bin/placeholder/RailWayModelL.dll": {}
         },
         "runtime": {
-          "bin/placeholder/RailWayModelLibrary.dll": {}
+          "bin/placeholder/RailWayModelL.dll": {}
         }
       }
     }
@@ -2098,6 +2110,33 @@
         "version.txt"
       ]
     },
+    "Newtonsoft.Json/13.0.1": {
+      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
     "System.Buffers/4.5.0": {
       "sha512": "pL2ChpaRRWI/p4LXyy4RgeWlYF2sgfj/pnVMvBqwNFr5cXg7CXNnWZWxrOONLg8VGdFB8oB+EG2Qw4MLgTOe+A==",
       "type": "package",
@@ -2686,15 +2725,15 @@
         "version.txt"
       ]
     },
-    "RailWayAppLibrary/1.0.0": {
+    "RailWayApp/1.0.0": {
       "type": "project",
-      "path": "../RailWayApp/RailWayAppLibrary.csproj",
-      "msbuildProject": "../RailWayApp/RailWayAppLibrary.csproj"
+      "path": "../RailWayApp/RailWayApp.csproj",
+      "msbuildProject": "../RailWayApp/RailWayApp.csproj"
     },
-    "RailWayModelLibrary/1.0.0": {
+    "RailWayModelL/1.0.0": {
       "type": "project",
-      "path": "../RailWayModel/RailWayModelLibrary.csproj",
-      "msbuildProject": "../RailWayModel/RailWayModelLibrary.csproj"
+      "path": "../RailWayModel/RailWayModelL.csproj",
+      "msbuildProject": "../RailWayModel/RailWayModelL.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2703,8 +2742,8 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.5",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.5",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 6.0.0",
-      "RailWayAppLibrary >= 1.0.0",
-      "RailWayModelLibrary >= 1.0.0"
+      "RailWayApp >= 1.0.0",
+      "RailWayModelL >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2715,9 +2754,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dell\\Desktop\\RailWayCleanArchitecture\\RailWayTractingSystem\\RailWayInfrastructureLibrary\\RailWayInfrastructureLibrary.csproj",
-      "projectName": "RailWayInfrastructureLibrary",
-      "projectPath": "C:\\Users\\dell\\Desktop\\RailWayCleanArchitecture\\RailWayTractingSystem\\RailWayInfrastructureLibrary\\RailWayInfrastructureLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\dell\\Desktop\\RailWayCleanArchitecture\\RailWayTractingSystem\\RailWayInfrastructureLibrary\\RailWayInfrastructure.csproj",
+      "projectName": "RailWayInfrastructure",
+      "projectPath": "C:\\Users\\dell\\Desktop\\RailWayCleanArchitecture\\RailWayTractingSystem\\RailWayInfrastructureLibrary\\RailWayInfrastructure.csproj",
       "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\dell\\Desktop\\RailWayCleanArchitecture\\RailWayTractingSystem\\RailWayInfrastructureLibrary\\obj\\",
       "projectStyle": "PackageReference",
@@ -2742,11 +2781,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\dell\\Desktop\\RailWayCleanArchitecture\\RailWayTractingSystem\\RailWayApp\\RailWayAppLibrary.csproj": {
-              "projectPath": "C:\\Users\\dell\\Desktop\\RailWayCleanArchitecture\\RailWayTractingSystem\\RailWayApp\\RailWayAppLibrary.csproj"
+            "C:\\Users\\dell\\Desktop\\RailWayCleanArchitecture\\RailWayTractingSystem\\RailWayApp\\RailWayApp.csproj": {
+              "projectPath": "C:\\Users\\dell\\Desktop\\RailWayCleanArchitecture\\RailWayTractingSystem\\RailWayApp\\RailWayApp.csproj"
             },
-            "C:\\Users\\dell\\Desktop\\RailWayCleanArchitecture\\RailWayTractingSystem\\RailWayModel\\RailWayModelLibrary.csproj": {
-              "projectPath": "C:\\Users\\dell\\Desktop\\RailWayCleanArchitecture\\RailWayTractingSystem\\RailWayModel\\RailWayModelLibrary.csproj"
+            "C:\\Users\\dell\\Desktop\\RailWayCleanArchitecture\\RailWayTractingSystem\\RailWayModel\\RailWayModelL.csproj": {
+              "projectPath": "C:\\Users\\dell\\Desktop\\RailWayCleanArchitecture\\RailWayTractingSystem\\RailWayModel\\RailWayModelL.csproj"
             }
           }
         }

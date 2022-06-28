@@ -4,12 +4,12 @@
     "C:\\Users\\dell\\Desktop\\RailWayCleanArchitecture\\RailWayTractingSystem\\RailWayInfrastructureLibrary\\RailWayInfrastructureLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dell\\Desktop\\RailWayCleanArchitecture\\RailWayTractingSystem\\RailWayApp\\RailWayAppLibrary.csproj": {
+    "C:\\Users\\dell\\Desktop\\RailWayCleanArchitecture\\RailWayTractingSystem\\RailWayApp\\RailWayApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dell\\Desktop\\RailWayCleanArchitecture\\RailWayTractingSystem\\RailWayApp\\RailWayAppLibrary.csproj",
-        "projectName": "RailWayAppLibrary",
-        "projectPath": "C:\\Users\\dell\\Desktop\\RailWayCleanArchitecture\\RailWayTractingSystem\\RailWayApp\\RailWayAppLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\dell\\Desktop\\RailWayCleanArchitecture\\RailWayTractingSystem\\RailWayApp\\RailWayApp.csproj",
+        "projectName": "RailWayApp",
+        "projectPath": "C:\\Users\\dell\\Desktop\\RailWayCleanArchitecture\\RailWayTractingSystem\\RailWayApp\\RailWayApp.csproj",
         "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\dell\\Desktop\\RailWayCleanArchitecture\\RailWayTractingSystem\\RailWayApp\\obj\\",
         "projectStyle": "PackageReference",
@@ -124,8 +124,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\dell\\Desktop\\RailWayCleanArchitecture\\RailWayTractingSystem\\RailWayApp\\RailWayAppLibrary.csproj": {
-                "projectPath": "C:\\Users\\dell\\Desktop\\RailWayCleanArchitecture\\RailWayTractingSystem\\RailWayApp\\RailWayAppLibrary.csproj"
+              "C:\\Users\\dell\\Desktop\\RailWayCleanArchitecture\\RailWayTractingSystem\\RailWayApp\\RailWayApp.csproj": {
+                "projectPath": "C:\\Users\\dell\\Desktop\\RailWayCleanArchitecture\\RailWayTractingSystem\\RailWayApp\\RailWayApp.csproj"
               },
               "C:\\Users\\dell\\Desktop\\RailWayCleanArchitecture\\RailWayTractingSystem\\RailWayModel\\RailWayModelLibrary.csproj": {
                 "projectPath": "C:\\Users\\dell\\Desktop\\RailWayCleanArchitecture\\RailWayTractingSystem\\RailWayModel\\RailWayModelLibrary.csproj"
@@ -222,6 +222,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

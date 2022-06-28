@@ -9,11 +9,12 @@ namespace RailWayInfrastructureLibrary.Utility
 {
     public class JWTAuthenticationManager : IAuthenticationManager
     {
-        private readonly string secritkey;
+        private string secritkey;
+        private JwtSecurityTokenHandler tokenHandler;
 
-        public JWTAuthenticationManager(string Secritkey)
+        public JWTAuthenticationManager( string _secritkey)
         {
-            secritkey = Secritkey;
+            secritkey = _secritkey;
         }
 
         public string AuthenticatePassenger(Passenger passenger)
@@ -37,11 +38,27 @@ namespace RailWayInfrastructureLibrary.Utility
                  new Claim(ClaimTypes.Name, staff.Name),
                  new Claim(ClaimTypes.Email, staff.Email),
                  new Claim(ClaimTypes.Role,staff.Role),
-                 new Claim("StaffId",staff.StaffId)
+                
             };
 
             return Authenticate(claims);
         }
+
+        public ClaimsPrincipal VerifyToken(string token)
+        {
+          var tokenval=  tokenHandler.ValidateToken(token,
+                new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(secritkey)),
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
+                    ValidateLifetime = false,
+                    ClockSkew=TimeSpan.Zero
+                }, out SecurityToken securityToken);
+            return tokenval;
+        }
+
         private string Authenticate(List<Claim> claims)
         {
             var key = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(secritkey));
@@ -50,10 +67,10 @@ namespace RailWayInfrastructureLibrary.Utility
 
             var token = new JwtSecurityToken(
                 claims: claims,
-                expires: DateTime.Now.AddDays(1),
+                expires: DateTime.UtcNow.AddDays(1),
                 signingCredentials: creds);
 
-            var jwt = new JwtSecurityTokenHandler().WriteToken(token);
+           var jwt = new JwtSecurityTokenHandler().WriteToken(token);
 
             return jwt;
         }

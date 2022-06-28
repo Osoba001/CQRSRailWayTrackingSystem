@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -19,7 +20,7 @@ namespace RailWayWebAPI.Controllers
          }
          [HttpPost]
          [Authorize(Policy="AdminOnly")]
-        [AllowAnonymous]
+  
         public async Task<IActionResult> CreateStaff([FromBody] CreateStaff staff)
         {
             return Ok(await mediator.Send(staff));
@@ -30,7 +31,7 @@ namespace RailWayWebAPI.Controllers
         {
             var _staff= await mediator.Send(staff);
             if (_staff.IsSoccess)
-                return Ok(_staff);
+                return Ok(_staff.Meassage);
             return BadRequest(_staff.Meassage);
         }
 
@@ -42,7 +43,7 @@ namespace RailWayWebAPI.Controllers
         }
         
         [HttpDelete]
-        [Authorize(Policy = "AdminOnly")]
+        [Authorize( Policy = "AdminOnly")]
         public async Task<IActionResult> DeleteStaff(Guid id)
         {
             return Ok(await mediator.Send(request: new DeleteStaff(id)));
@@ -56,7 +57,7 @@ namespace RailWayWebAPI.Controllers
         }
 
         [HttpGet]
-        [Authorize(Policy = "AdminOnly")]
+        [Authorize(Policy ="AdminOnly")]
         public async Task<IActionResult> GetAllStaff()
         {
             return Ok(await mediator.Send(request:new GetAllStaff()));
