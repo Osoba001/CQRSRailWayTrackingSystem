@@ -1,26 +1,20 @@
 ﻿using RailWayModelLibrary.Entities.Base;
+using System.ComponentModel.DataAnnotations;
 
 namespace RailWayModelLibrary.Entities
 {
     public class Station : EntityBase, IBaseModel
     {
-
-        public Station(string name, int priousIndex, Track track, string location, decimal amount, string stationPhoneNo)
+        public Station(int priousIndex)
         {
-            StationName = name;
             Index = priousIndex + 1;
-            Track = track;
-            Location = location;
-            Amount = amount;
-            StationPhoneNo = stationPhoneNo;
         }
-        public Station()
-        {
-
-        }
+        [Required]
         public string StationName { get; set; }
         public DateTime TrainArriverTime { get; set; }
+        [Required]
         public int Index { get; set; }
+        [Required]
         public Track Track { get; set; }
         public string Location { get; set; }
         public decimal Amount { get; set; }

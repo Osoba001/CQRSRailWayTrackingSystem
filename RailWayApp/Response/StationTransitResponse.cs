@@ -9,8 +9,8 @@ namespace RailWayAppLibrary.Response
     public class StationTransitResponse
     {
         public int StationIndex { get; set; }
-        public string StationName { get; set; }
-        public string Location { get; set; }
+        public string? StationName { get; set; }
+        public string? Location { get; set; }
         public int NPickUp { get; set; }
         public int NDischarge { get; set; }
 

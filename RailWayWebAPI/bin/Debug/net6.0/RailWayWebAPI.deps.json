@@ -11,8 +11,8 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.1",
           "Microsoft.EntityFrameworkCore.Design": "6.0.5",
-          "RailWayAppLibrary": "1.0.0",
-          "RailWayInfrastructureLibrary": "1.0.0",
+          "RailWayApp": "1.0.0",
+          "RailWayInfrastructure": "1.0.0",
           "Serilog.AspNetCore": "5.0.0",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
@@ -241,7 +241,7 @@
       },
       "Microsoft.EntityFrameworkCore/6.0.5": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Abstractions": "6.0.5",
+          "Microsoft.EntityFrameworkCore.Abstractions": "6.0.6",
           "Microsoft.EntityFrameworkCore.Analyzers": "6.0.5",
           "Microsoft.Extensions.Caching.Memory": "6.0.1",
           "Microsoft.Extensions.DependencyInjection": "6.0.0",
@@ -256,11 +256,11 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Abstractions/6.0.5": {
+      "Microsoft.EntityFrameworkCore.Abstractions/6.0.6": {
         "runtime": {
           "lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
-            "assemblyVersion": "6.0.5.0",
-            "fileVersion": "6.0.522.21804"
+            "assemblyVersion": "6.0.6.0",
+            "fileVersion": "6.0.622.26602"
           }
         }
       },
@@ -831,38 +831,39 @@
           }
         }
       },
-      "RailWayAppLibrary/1.0.0": {
+      "RailWayApp/1.0.0": {
         "dependencies": {
           "AutoMapper": "11.0.1",
           "MediatR": "10.0.1",
           "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.1",
           "Microsoft.AspNetCore.Authentication": "2.2.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.6",
-          "RailWayModelLibrary": "1.0.0",
+          "RailWayModelL": "1.0.0",
           "System.IdentityModel.Tokens.Jwt": "6.19.0"
         },
         "runtime": {
-          "RailWayAppLibrary.dll": {}
+          "RailWayApp.dll": {}
         }
       },
-      "RailWayInfrastructureLibrary/1.0.0": {
+      "RailWayInfrastructure/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.5",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
-          "RailWayAppLibrary": "1.0.0",
-          "RailWayModelLibrary": "1.0.0"
+          "RailWayApp": "1.0.0",
+          "RailWayModelL": "1.0.0"
         },
         "runtime": {
-          "RailWayInfrastructureLibrary.dll": {}
+          "RailWayInfrastructure.dll": {}
         }
       },
-      "RailWayModelLibrary/1.0.0": {
+      "RailWayModelL/1.0.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.Abstractions": "6.0.6",
           "Newtonsoft.Json": "13.0.1"
         },
         "runtime": {
-          "RailWayModelLibrary.dll": {}
+          "RailWayModelL.dll": {}
         }
       }
     }
@@ -1041,12 +1042,12 @@
       "path": "microsoft.entityframeworkcore/6.0.5",
       "hashPath": "microsoft.entityframeworkcore.6.0.5.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Abstractions/6.0.5": {
+    "Microsoft.EntityFrameworkCore.Abstractions/6.0.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Q3/fKW6XCTfnDk4fYP2BJZi84cD2SuCPkP3A3QqxvCQcXbX90bfSLzVIsoMXzigHGJgZUJ+Un7QodT5Nvk0+Eg==",
-      "path": "microsoft.entityframeworkcore.abstractions/6.0.5",
-      "hashPath": "microsoft.entityframeworkcore.abstractions.6.0.5.nupkg.sha512"
+      "sha512": "sha512-Z4Ep2LDUSSNjriin0wKH4jF4vsjQ2ICwC9/5ntDVShQqy1C8AmmE5oK25jfthEVSIosDhJoWCescV3xKa9kcpg==",
+      "path": "microsoft.entityframeworkcore.abstractions/6.0.6",
+      "hashPath": "microsoft.entityframeworkcore.abstractions.6.0.6.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Analyzers/6.0.5": {
       "type": "package",
@@ -1517,17 +1518,17 @@
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
     },
-    "RailWayAppLibrary/1.0.0": {
+    "RailWayApp/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "RailWayInfrastructureLibrary/1.0.0": {
+    "RailWayInfrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "RailWayModelLibrary/1.0.0": {
+    "RailWayModelL/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,30 +1,24 @@
-﻿using RailWayModelLibrary.RailWayEnums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
+using RailWayModelLibrary.RailWayEnums;
+using System.ComponentModel.DataAnnotations;
 
 namespace RailWayModelLibrary.Entities.Base
 {
+    [Index(nameof(Email), IsUnique = true)]
+    [Index(nameof(PhoneNo), IsUnique = true)]
     public class Person: EntityBase
     {
-        public Person()
-        {
-
-        }
-        public Person(string name, Gender gender, string address, string phoneNo, string email)
-        {
-            Name = name;
-            Gender = gender;
-            Address = address;
-            PhoneNo = phoneNo;
-            Email = email;
-        }
+        [Required]
         public string Name { get; set; }
+
+        [Required]
         public Gender Gender { get; set; }
+
+        [Required]
         public string Address { get; set; }
+        [Required]
         public string PhoneNo { get; set; }
+        [Required]
         public string Email { get; set; }
 
         public byte[] PasswordHash { get; set; }

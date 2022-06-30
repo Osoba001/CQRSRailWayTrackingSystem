@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DrZsq+Y0dzKmK96fvfIhFh4X+G6iY+57DJwuy6SQhzTvEw1+EHDMMNo0oY19esYV2eqa3Zuka4OnjmF63SSGXw==",
+  "dgSpecHash": "rZPMa7SvxCi5HDhpNx3VfgcMtkFQwI28H6MOOT4dkN0OquZVTI05zjhyl/erdCewUBdZj9KVg/J2Mh7dZDf74w==",
   "success": true,
   "projectFilePath": "C:\\Users\\dell\\Desktop\\RailWayCleanArchitecture\\RailWayTractingSystem\\RailWayInfrastructureLibrary\\RailWayInfrastructure.csproj",
   "expectedPackageFiles": [
@@ -27,7 +27,7 @@
     "C:\\Users\\dell\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\dell\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\dell\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.5\\microsoft.entityframeworkcore.6.0.5.nupkg.sha512",
-    "C:\\Users\\dell\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.5\\microsoft.entityframeworkcore.abstractions.6.0.5.nupkg.sha512",
+    "C:\\Users\\dell\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.6\\microsoft.entityframeworkcore.abstractions.6.0.6.nupkg.sha512",
     "C:\\Users\\dell\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.5\\microsoft.entityframeworkcore.analyzers.6.0.5.nupkg.sha512",
     "C:\\Users\\dell\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.5\\microsoft.entityframeworkcore.design.6.0.5.nupkg.sha512",
     "C:\\Users\\dell\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.5\\microsoft.entityframeworkcore.relational.6.0.5.nupkg.sha512",

@@ -1,31 +1,27 @@
 ﻿using RailWayModelLibrary.Entities.Base;
+using System.ComponentModel.DataAnnotations;
 
 namespace RailWayModelLibrary.Entities
 {
+    
     public class BookedTrip: EntityBase, IBaseModel
     {
         public BookedTrip()
         {
-
-        }
-        public BookedTrip(Station pickupStation, Station destinationStation, DateTime tripdate, Passenger passenger, int nseat)
-        {
-            PickupStation = pickupStation;
-            DestinationStation = destinationStation;
-            TripDate = tripdate;
-            Passenger = passenger;
-            NumberOfSeat = nseat;
             SettledTrip = false;
-
         }
+        [Required]
         public Station PickupStation { get; set; }
+        [Required]
         public Station DestinationStation { get; set; }
         public DateTime TripDate { get; set; }
         public bool SettledTrip { get; set; }
+        [Required]
         public Passenger Passenger { get; set; }
         public Guid PaymentId { get; set; }
         public Payment Payment { get; set; }
         public Train Train { get; set; }
+        [Required]
         public int NumberOfSeat { get; set; }
     }
 

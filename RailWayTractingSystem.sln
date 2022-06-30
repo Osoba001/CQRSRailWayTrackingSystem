@@ -5,9 +5,9 @@ VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RailWayWebAPI", "RailWayWebAPI\RailWayWebAPI.csproj", "{838FC477-AC39-4696-BA3B-5989A22D9E9A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RailWayModelLibrary", "RailWayModel\RailWayModelLibrary.csproj", "{63E5B25A-2D14-42B1-B036-472A27B1DD2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RailWayModelL", "RailWayModel\RailWayModelL.csproj", "{63E5B25A-2D14-42B1-B036-472A27B1DD2D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RailWayInfrastructureLibrary", "RailWayInfrastructureLibrary\RailWayInfrastructureLibrary.csproj", "{23776F58-D3C7-4083-9C5A-AB34F0EFAD70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RailWayInfrastructure", "RailWayInfrastructureLibrary\RailWayInfrastructure.csproj", "{23776F58-D3C7-4083-9C5A-AB34F0EFAD70}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RailWayApp", "RailWayApp\RailWayApp.csproj", "{F8C0A035-FF49-49A5-B051-511880733864}"
 EndProject

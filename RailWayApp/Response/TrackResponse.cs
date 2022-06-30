@@ -9,7 +9,7 @@ namespace RailWayAppLibrary.Response
 {
     public class TrackResponse:EntityBase
     {
-        public string TrackName { get; set; }
+        public string? TrackName { get; set; }
         public int NStation { get; set; }
     }
 }

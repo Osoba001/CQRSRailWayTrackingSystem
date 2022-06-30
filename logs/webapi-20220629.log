@@ -1,0 +1,424 @@
+[INF]  User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+[INF]  Now listening on: https://localhost:7247 
+[INF]  Now listening on: http://localhost:5247 
+[INF]  Application started. Press Ctrl+C to shut down. 
+[INF]  Hosting environment: Development 
+[INF]  Content root path: C:\Users\dell\Desktop\RailWayCleanArchitecture\RailWayTractingSystem\RailWayWebAPI\ 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/swagger/index.html - - 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/swagger/index.html - - - 200 - text/html;charset=utf-8 3048.4295ms 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 80.7027ms 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/swagger/v1/swagger.json - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1167.4441ms 
+[INF]  Request starting HTTP/1.1 POST https://localhost:7247/api/Staff/login application/json 73 
+[ERR]  An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: No service for type 'RailWayWebAPI.CustomMiddleware.ExceptionHandlerMiddleware' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Http.MiddlewareFactory.Create(Type middlewareType)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[INF]  Request finished HTTP/1.1 POST https://localhost:7247/api/Staff/login application/json 73 - 500 - text/plain;+charset=utf-8 8923.8415ms 
+[INF]  User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+[INF]  Now listening on: https://localhost:7247 
+[INF]  Now listening on: http://localhost:5247 
+[INF]  Application started. Press Ctrl+C to shut down. 
+[INF]  Hosting environment: Development 
+[INF]  Content root path: C:\Users\dell\Desktop\RailWayCleanArchitecture\RailWayTractingSystem\RailWayWebAPI\ 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/swagger/index.html - - 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/swagger/index.html - - - 200 - text/html;charset=utf-8 1300.5521ms 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 42.3116ms 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/swagger/v1/swagger.json - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 306.1734ms 
+[INF]  User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+[INF]  Now listening on: https://localhost:7247 
+[INF]  Now listening on: http://localhost:5247 
+[INF]  Application started. Press Ctrl+C to shut down. 
+[INF]  Hosting environment: Development 
+[INF]  Content root path: C:\Users\dell\Desktop\RailWayCleanArchitecture\RailWayTractingSystem\RailWayWebAPI\ 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/swagger/index.html - - 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/swagger/index.html - - - 200 - text/html;charset=utf-8 2147.9892ms 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 69.6173ms 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/swagger/v1/swagger.json - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1168.9681ms 
+[INF]  Request starting HTTP/1.1 POST https://localhost:7247/api/Staff/login application/json 73 
+[ERR]  An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: No service for type 'RailWayWebAPI.CustomMiddleware.ExceptionHandlerMiddleware' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Http.MiddlewareFactory.Create(Type middlewareType)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[INF]  Request finished HTTP/1.1 POST https://localhost:7247/api/Staff/login application/json 73 - 500 - text/plain;+charset=utf-8 2178.5984ms 
+[INF]  User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+[INF]  Now listening on: https://localhost:7247 
+[INF]  Now listening on: http://localhost:5247 
+[INF]  Application started. Press Ctrl+C to shut down. 
+[INF]  Hosting environment: Development 
+[INF]  Content root path: C:\Users\dell\Desktop\RailWayCleanArchitecture\RailWayTractingSystem\RailWayWebAPI\ 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/swagger/index.html - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/swagger/index.html - - - 200 - text/html;charset=utf-8 543.4211ms 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 7.5385ms 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/swagger/v1/swagger.json - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 150.3551ms 
+[INF]  Request starting HTTP/1.1 POST https://localhost:7247/api/Staff/login application/json 73 
+[ERR]  An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: No service for type 'RailWayWebAPI.CustomMiddleware.ExceptionHandlerMiddleware' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Http.MiddlewareFactory.Create(Type middlewareType)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[INF]  Request finished HTTP/1.1 POST https://localhost:7247/api/Staff/login application/json 73 - 500 - text/plain;+charset=utf-8 44.4351ms 
+[INF]  Request starting HTTP/1.1 POST https://localhost:7247/api/Staff/login application/json 73 
+[ERR]  An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: No service for type 'RailWayWebAPI.CustomMiddleware.ExceptionHandlerMiddleware' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Http.MiddlewareFactory.Create(Type middlewareType)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[INF]  Request finished HTTP/1.1 POST https://localhost:7247/api/Staff/login application/json 73 - 500 - text/plain;+charset=utf-8 4.1336ms 
+[INF]  User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+[INF]  Now listening on: https://localhost:7247 
+[INF]  Now listening on: http://localhost:5247 
+[INF]  Application started. Press Ctrl+C to shut down. 
+[INF]  Hosting environment: Development 
+[INF]  Content root path: C:\Users\dell\Desktop\RailWayCleanArchitecture\RailWayTractingSystem\RailWayWebAPI\ 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/swagger/index.html - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/swagger/index.html - - - 200 - text/html;charset=utf-8 502.8475ms 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 6.8286ms 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/swagger/v1/swagger.json - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 220.8740ms 
+[INF]  Request starting HTTP/1.1 POST https://localhost:7247/api/Staff/login application/json 73 
+[ERR]  An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: No service for type 'RailWayWebAPI.CustomMiddleware.ExceptionHandlerMiddleware' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Http.MiddlewareFactory.Create(Type middlewareType)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[INF]  Request finished HTTP/1.1 POST https://localhost:7247/api/Staff/login application/json 73 - 500 - text/plain;+charset=utf-8 66.2295ms 
+[INF]  Request starting HTTP/1.1 POST https://localhost:7247/api/Staff/login application/json 73 
+[ERR]  An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: No service for type 'RailWayWebAPI.CustomMiddleware.ExceptionHandlerMiddleware' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Http.MiddlewareFactory.Create(Type middlewareType)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[INF]  Request finished HTTP/1.1 POST https://localhost:7247/api/Staff/login application/json 73 - 500 - text/plain;+charset=utf-8 10.5771ms 
+[INF]  User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+[INF]  Now listening on: https://localhost:7247 
+[INF]  Now listening on: http://localhost:5247 
+[INF]  Application started. Press Ctrl+C to shut down. 
+[INF]  Hosting environment: Development 
+[INF]  Content root path: C:\Users\dell\Desktop\RailWayCleanArchitecture\RailWayTractingSystem\RailWayWebAPI\ 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/swagger/index.html - - 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 5.0817ms 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/swagger/index.html - - - 200 - text/html;charset=utf-8 491.5895ms 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/swagger/v1/swagger.json - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 204.1198ms 
+[INF]  Request starting HTTP/1.1 POST https://localhost:7247/api/Staff/login application/json 73 
+[ERR]  An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: No service for type 'RailWayWebAPI.CustomMiddleware.ExceptionHandlerMiddleware' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Http.MiddlewareFactory.Create(Type middlewareType)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[INF]  Request finished HTTP/1.1 POST https://localhost:7247/api/Staff/login application/json 73 - 500 - text/plain;+charset=utf-8 43.2178ms 
+[INF]  Request starting HTTP/1.1 POST https://localhost:7247/api/Staff/login application/json 73 
+[ERR]  An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: No service for type 'RailWayWebAPI.CustomMiddleware.ExceptionHandlerMiddleware' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Http.MiddlewareFactory.Create(Type middlewareType)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[INF]  Request finished HTTP/1.1 POST https://localhost:7247/api/Staff/login application/json 73 - 500 - text/plain;+charset=utf-8 4.0514ms 
+[INF]  Request starting HTTP/2 POST https://localhost:7247/api/Staff/Login application/json 69 
+[ERR]  An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: No service for type 'RailWayWebAPI.CustomMiddleware.ExceptionHandlerMiddleware' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Http.MiddlewareFactory.Create(Type middlewareType)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[INF]  Request finished HTTP/2 POST https://localhost:7247/api/Staff/Login application/json 69 - 500 - text/plain;+charset=utf-8 73.2768ms 
+[INF]  User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+[FTL]  Application startup exception 
+System.InvalidOperationException: A suitable constructor for type 'RailWayWebAPI.CustomMiddleware.ExceptionHandlerMiddleware' could not be located. Ensure the type is concrete and services are registered for all parameters of a public constructor.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+[INF]  User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+[FTL]  Application startup exception 
+System.InvalidOperationException: A suitable constructor for type 'RailWayWebAPI.CustomMiddleware.ExceptionHandlerMiddleware' could not be located. Ensure the type is concrete and services are registered for all parameters of a public constructor.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+[INF]  User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+[FTL]  Application startup exception 
+System.InvalidOperationException: A suitable constructor for type 'RailWayWebAPI.CustomMiddleware.ExceptionHandlerMiddleware' could not be located. Ensure the type is concrete and services are registered for all parameters of a public constructor.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+[INF]  User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+[INF]  Now listening on: https://localhost:7247 
+[INF]  Now listening on: http://localhost:5247 
+[INF]  Application started. Press Ctrl+C to shut down. 
+[INF]  Hosting environment: Development 
+[INF]  Content root path: C:\Users\dell\Desktop\RailWayCleanArchitecture\RailWayTractingSystem\RailWayWebAPI\ 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/swagger/index.html - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/swagger/index.html - - - 200 - text/html;charset=utf-8 471.0274ms 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 8.8314ms 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/swagger/v1/swagger.json - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 239.5332ms 
+[INF]  Request starting HTTP/2 POST https://localhost:7247/api/Staff/Login application/json 69 
+[INF]  CORS policy execution successful. 
+[INF]  Executing endpoint 'RailWayWebAPI.Controllers.StaffController.Login (RailWayWebAPI)' 
+[INF]  Route matched with {action = "Login", controller = "Staff"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(RailWayAppLibrary.Queries.LoginStaff) on controller RailWayWebAPI.Controllers.StaffController (RailWayWebAPI). 
+[INF]  User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+[FTL]  Application startup exception 
+System.InvalidOperationException: A suitable constructor for type 'RailWayWebAPI.CustomMiddleware.ExceptionHandlerMiddleware' could not be located. Ensure the type is concrete and services are registered for all parameters of a public constructor.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+[INF]  User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+[INF]  Now listening on: https://localhost:7247 
+[INF]  Now listening on: http://localhost:5247 
+[INF]  Application started. Press Ctrl+C to shut down. 
+[INF]  Hosting environment: Development 
+[INF]  Content root path: C:\Users\dell\Desktop\RailWayCleanArchitecture\RailWayTractingSystem\RailWayWebAPI\ 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/swagger/index.html - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/swagger/index.html - - - 200 - text/html;charset=utf-8 519.4091ms 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 19.2884ms 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/swagger/v1/swagger.json - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 220.8368ms 
+[INF]  Request starting HTTP/2 POST https://localhost:7247/api/Staff/Login application/json 47 
+[ERR]  An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: No service for type 'RailWayWebAPI.CustomMiddleware.ExceptionHandlerMiddleware' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Http.MiddlewareFactory.Create(Type middlewareType)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[INF]  Request finished HTTP/2 POST https://localhost:7247/api/Staff/Login application/json 47 - 500 - text/plain;+charset=utf-8 71.8956ms 
+[INF]  User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+[INF]  Now listening on: https://localhost:7247 
+[INF]  Now listening on: http://localhost:5247 
+[INF]  Application started. Press Ctrl+C to shut down. 
+[INF]  Hosting environment: Development 
+[INF]  Content root path: C:\Users\dell\Desktop\RailWayCleanArchitecture\RailWayTractingSystem\RailWayWebAPI\ 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/swagger/index.html - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/swagger/index.html - - - 200 - text/html;charset=utf-8 557.9748ms 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 5.5229ms 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/swagger/v1/swagger.json - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 231.0878ms 
+[INF]  Request starting HTTP/2 POST https://localhost:7247/api/Staff/Login application/json 47 
+[ERR]  An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: No service for type 'RailWayWebAPI.CustomMiddleware.ExceptionHandlerMiddleware' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Http.MiddlewareFactory.Create(Type middlewareType)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[INF]  Request finished HTTP/2 POST https://localhost:7247/api/Staff/Login application/json 47 - 500 - text/plain;+charset=utf-8 59.5320ms 
+[INF]  User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+[FTL]  Application startup exception 
+System.InvalidOperationException: A suitable constructor for type 'RailWayWebAPI.CustomMiddleware.ExceptionHandlerMiddleware' could not be located. Ensure the type is concrete and services are registered for all parameters of a public constructor.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+[INF]  User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+[INF]  Now listening on: https://localhost:7247 
+[INF]  Now listening on: http://localhost:5247 
+[INF]  Application started. Press Ctrl+C to shut down. 
+[INF]  Hosting environment: Development 
+[INF]  Content root path: C:\Users\dell\Desktop\RailWayCleanArchitecture\RailWayTractingSystem\RailWayWebAPI\ 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/swagger/index.html - - 
+[ERR]  An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: Unable to resolve service for type 'Swashbuckle.AspNetCore.Swagger.ISwaggerProvider' while attempting to Invoke middleware 'Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware'.
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.GetService(IServiceProvider sp, Type type, Type middleware)
+   at lambda_method2(Closure , Object , HttpContext , IServiceProvider )
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_1.<UseMiddleware>b__2(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[INF]  Request finished HTTP/2 GET https://localhost:7247/swagger/index.html - - - 500 - text/html;+charset=utf-8 323.4927ms 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 5.4302ms 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/favicon.ico - - 
+[ERR]  An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: Unable to resolve service for type 'Swashbuckle.AspNetCore.Swagger.ISwaggerProvider' while attempting to Invoke middleware 'Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware'.
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.GetService(IServiceProvider sp, Type type, Type middleware)
+   at lambda_method2(Closure , Object , HttpContext , IServiceProvider )
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_1.<UseMiddleware>b__2(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[INF]  Request finished HTTP/2 GET https://localhost:7247/favicon.ico - - - 500 - text/plain;+charset=utf-8 4.4444ms 
+[INF]  User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+[INF]  Now listening on: https://localhost:7247 
+[INF]  Now listening on: http://localhost:5247 
+[INF]  Application started. Press Ctrl+C to shut down. 
+[INF]  Hosting environment: Development 
+[INF]  Content root path: C:\Users\dell\Desktop\RailWayCleanArchitecture\RailWayTractingSystem\RailWayWebAPI\ 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/swagger/index.html - - 
+[ERR]  An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: Unable to resolve service for type 'Swashbuckle.AspNetCore.Swagger.ISwaggerProvider' while attempting to Invoke middleware 'Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware'.
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.GetService(IServiceProvider sp, Type type, Type middleware)
+   at lambda_method2(Closure , Object , HttpContext , IServiceProvider )
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_1.<UseMiddleware>b__2(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[INF]  Request finished HTTP/2 GET https://localhost:7247/swagger/index.html - - - 500 - text/html;+charset=utf-8 228.0969ms 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 8.9812ms 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/favicon.ico - - 
+[ERR]  An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: Unable to resolve service for type 'Swashbuckle.AspNetCore.Swagger.ISwaggerProvider' while attempting to Invoke middleware 'Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware'.
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.GetService(IServiceProvider sp, Type type, Type middleware)
+   at lambda_method2(Closure , Object , HttpContext , IServiceProvider )
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_1.<UseMiddleware>b__2(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[INF]  Request finished HTTP/2 GET https://localhost:7247/favicon.ico - - - 500 - text/plain;+charset=utf-8 4.7907ms 
+[INF]  User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+[INF]  Now listening on: https://localhost:7247 
+[INF]  Now listening on: http://localhost:5247 
+[INF]  Application started. Press Ctrl+C to shut down. 
+[INF]  Hosting environment: Development 
+[INF]  Content root path: C:\Users\dell\Desktop\RailWayCleanArchitecture\RailWayTractingSystem\RailWayWebAPI\ 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/swagger/index.html - - 
+[ERR]  An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: Unable to resolve service for type 'Swashbuckle.AspNetCore.Swagger.ISwaggerProvider' while attempting to Invoke middleware 'Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware'.
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.GetService(IServiceProvider sp, Type type, Type middleware)
+   at lambda_method2(Closure , Object , HttpContext , IServiceProvider )
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_1.<UseMiddleware>b__2(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[INF]  Request starting HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/swagger/index.html - - - 500 - text/html;+charset=utf-8 490.5846ms 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 6.4464ms 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/favicon.ico - - 
+[ERR]  An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: Unable to resolve service for type 'Swashbuckle.AspNetCore.Swagger.ISwaggerProvider' while attempting to Invoke middleware 'Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware'.
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.GetService(IServiceProvider sp, Type type, Type middleware)
+   at lambda_method2(Closure , Object , HttpContext , IServiceProvider )
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_1.<UseMiddleware>b__2(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[INF]  Request finished HTTP/2 GET https://localhost:7247/favicon.ico - - - 500 - text/plain;+charset=utf-8 7.8495ms 
+[INF]  User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+[INF]  Now listening on: https://localhost:7247 
+[INF]  Now listening on: http://localhost:5247 
+[INF]  Application started. Press Ctrl+C to shut down. 
+[INF]  Hosting environment: Development 
+[INF]  Content root path: C:\Users\dell\Desktop\RailWayCleanArchitecture\RailWayTractingSystem\RailWayWebAPI\ 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/swagger/index.html - - 
+[ERR]  An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: Unable to resolve service for type 'Swashbuckle.AspNetCore.Swagger.ISwaggerProvider' while attempting to Invoke middleware 'Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware'.
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.GetService(IServiceProvider sp, Type type, Type middleware)
+   at lambda_method2(Closure , Object , HttpContext , IServiceProvider )
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_1.<UseMiddleware>b__2(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[INF]  Request finished HTTP/2 GET https://localhost:7247/swagger/index.html - - - 500 - text/html;+charset=utf-8 511.3427ms 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 6.2493ms 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/favicon.ico - - 
+[ERR]  An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: Unable to resolve service for type 'Swashbuckle.AspNetCore.Swagger.ISwaggerProvider' while attempting to Invoke middleware 'Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware'.
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.GetService(IServiceProvider sp, Type type, Type middleware)
+   at lambda_method2(Closure , Object , HttpContext , IServiceProvider )
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_1.<UseMiddleware>b__2(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[INF]  Request finished HTTP/2 GET https://localhost:7247/favicon.ico - - - 500 - text/plain;+charset=utf-8 4.9824ms 
+[INF]  User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+[INF]  Now listening on: https://localhost:7247 
+[INF]  Now listening on: http://localhost:5247 
+[INF]  Application started. Press Ctrl+C to shut down. 
+[INF]  Hosting environment: Development 
+[INF]  Content root path: C:\Users\dell\Desktop\RailWayCleanArchitecture\RailWayTractingSystem\RailWayWebAPI\ 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/swagger/index.html - - 
+[ERR]  An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: Unable to resolve service for type 'Swashbuckle.AspNetCore.Swagger.ISwaggerProvider' while attempting to Invoke middleware 'Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware'.
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.GetService(IServiceProvider sp, Type type, Type middleware)
+   at lambda_method2(Closure , Object , HttpContext , IServiceProvider )
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_1.<UseMiddleware>b__2(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[INF]  Request finished HTTP/2 GET https://localhost:7247/swagger/index.html - - - 500 - text/html;+charset=utf-8 551.7337ms 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 6.7027ms 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/favicon.ico - - 
+[ERR]  An unhandled exception has occurred while executing the request. 
+System.InvalidOperationException: Unable to resolve service for type 'Swashbuckle.AspNetCore.Swagger.ISwaggerProvider' while attempting to Invoke middleware 'Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware'.
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.GetService(IServiceProvider sp, Type type, Type middleware)
+   at lambda_method2(Closure , Object , HttpContext , IServiceProvider )
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_1.<UseMiddleware>b__2(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[INF]  Request finished HTTP/2 GET https://localhost:7247/favicon.ico - - - 500 - text/plain;+charset=utf-8 6.9393ms 
+[INF]  User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+[INF]  Now listening on: https://localhost:7247 
+[INF]  Now listening on: http://localhost:5247 
+[INF]  Application started. Press Ctrl+C to shut down. 
+[INF]  Hosting environment: Development 
+[INF]  Content root path: C:\Users\dell\Desktop\RailWayCleanArchitecture\RailWayTractingSystem\RailWayWebAPI\ 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/swagger/index.html - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/swagger/index.html - - - 200 - text/html;charset=utf-8 2949.6843ms 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 10.3614ms 
+[INF]  Request starting HTTP/2 GET https://localhost:7247/swagger/v1/swagger.json - - 
+[INF]  Request finished HTTP/2 GET https://localhost:7247/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1019.1426ms 
+[INF]  Request starting HTTP/2 POST https://localhost:7247/api/Staff/Login application/json 47 
+[INF]  CORS policy execution successful. 
+[INF]  Executing endpoint 'RailWayWebAPI.Controllers.StaffController.Login (RailWayWebAPI)' 
+[INF]  Route matched with {action = "Login", controller = "Staff"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(RailWayAppLibrary.Queries.LoginStaff) on controller RailWayWebAPI.Controllers.StaffController (RailWayWebAPI). 

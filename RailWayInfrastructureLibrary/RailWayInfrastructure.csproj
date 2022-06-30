@@ -18,7 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RailWayApp\RailWayApp.csproj" />
-    <ProjectReference Include="..\RailWayModel\RailWayModelLibrary.csproj" />
+    <ProjectReference Include="..\RailWayModel\RailWayModelL.csproj" />
   </ItemGroup>
 
 </Project>

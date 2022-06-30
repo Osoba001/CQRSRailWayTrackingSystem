@@ -10,12 +10,12 @@ namespace RailWayAppLibrary.Response.Base
 {
      public class PersonResponse:EntityBase
     {
-        public string Name { get; set; }
-        public Gender Gender { get; set; }
-        public string Address { get; set; }
-        public string PhoneNo { get; set; }
-        public string Email { get; set; }
-        public string ?Meassage { get; set; }
+        public string? Name { get; set; }
+        public Gender? Gender { get; set; }
+        public string? Address { get; set; }
+        public string? PhoneNo { get; set; }
+        public string? Email { get; set; }
+        public string? Meassage { get; set; }
         public bool IsSoccess { get; set; }
     }
 }

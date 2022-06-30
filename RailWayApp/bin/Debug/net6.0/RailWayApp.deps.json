@@ -13,7 +13,7 @@
           "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.1",
           "Microsoft.AspNetCore.Authentication": "2.2.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.6",
-          "RailWayModelLibrary": "1.0.0",
+          "RailWayModelL": "1.0.0",
           "System.IdentityModel.Tokens.Jwt": "6.19.0"
         },
         "runtime": {
@@ -161,6 +161,14 @@
         }
       },
       "Microsoft.CSharp/4.7.0": {},
+      "Microsoft.EntityFrameworkCore.Abstractions/6.0.6": {
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
+            "assemblyVersion": "6.0.6.0",
+            "fileVersion": "6.0.622.26602"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration.Abstractions/2.2.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "2.2.0"
@@ -341,12 +349,13 @@
         }
       },
       "System.Text.Encodings.Web/4.5.0": {},
-      "RailWayModelLibrary/1.0.0": {
+      "RailWayModelL/1.0.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.Abstractions": "6.0.6",
           "Newtonsoft.Json": "13.0.1"
         },
         "runtime": {
-          "RailWayModelLibrary.dll": {}
+          "RailWayModelL.dll": {}
         }
       }
     }
@@ -489,6 +498,13 @@
       "sha512": "sha512-pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
       "path": "microsoft.csharp/4.7.0",
       "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Abstractions/6.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Z4Ep2LDUSSNjriin0wKH4jF4vsjQ2ICwC9/5ntDVShQqy1C8AmmE5oK25jfthEVSIosDhJoWCescV3xKa9kcpg==",
+      "path": "microsoft.entityframeworkcore.abstractions/6.0.6",
+      "hashPath": "microsoft.entityframeworkcore.abstractions.6.0.6.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration.Abstractions/2.2.0": {
       "type": "package",
@@ -707,7 +723,7 @@
       "path": "system.text.encodings.web/4.5.0",
       "hashPath": "system.text.encodings.web.4.5.0.nupkg.sha512"
     },
-    "RailWayModelLibrary/1.0.0": {
+    "RailWayModelL/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

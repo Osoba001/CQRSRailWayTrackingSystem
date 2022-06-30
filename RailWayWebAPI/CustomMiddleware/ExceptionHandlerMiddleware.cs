@@ -4,15 +4,16 @@ using System.Net;
 
 namespace RailWayWebAPI.CustomMiddleware
 {
-    public class ExceptionHandlerMiddleware : IMiddleware
+    public class ExceptionHandlerMiddleware //: IMiddleware
     {
-        private readonly ILogger logger;
-
-        public ExceptionHandlerMiddleware(ILogger logger)
+        private readonly ILogger<ExceptionHandlerMiddleware> logger;
+        private readonly RequestDelegate next;
+        public ExceptionHandlerMiddleware(RequestDelegate next, ILogger<ExceptionHandlerMiddleware> logger)
         {
             this.logger = logger;
+            this.next = next;
         }
-        public async Task InvokeAsync(HttpContext context, RequestDelegate next)
+        public async Task InvokeAsync(HttpContext context)
         {
             try
             {

@@ -1,4 +1,5 @@
 ﻿using RailWayModelLibrary.Entities.Base;
+using System.ComponentModel.DataAnnotations;
 
 namespace RailWayModelLibrary.Entities
 {
@@ -6,18 +7,14 @@ namespace RailWayModelLibrary.Entities
     {
         public Payment()
         {
-
-        }
-        public Payment(Passenger passenger, decimal amount, BookedTrip bookedTrip, DateTime timeofpayment)
-        {
-            Passenger = passenger;
-            BookedTrip = bookedTrip;
-            Amount = amount;
             IsAprove = false;
-            TimeOfPayment = timeofpayment;
         }
+
+        [Required]
         public Passenger Passenger { get; set; }
+        [Required]
         public decimal Amount { get; set; }
+        [Required]
         public DateTime TimeOfPayment { get; set; }
         public bool IsAprove { get; set; }
         public BookedTrip BookedTrip { get; set; }

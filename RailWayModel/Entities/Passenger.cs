@@ -10,15 +10,6 @@ namespace RailWayModelLibrary.Entities
 {
     public class Passenger:Person,IBaseModel
     {
-        public Passenger()
-        {
-
-        }
-        public Passenger(string nokName, string nokPhoneNo, string name, Gender gender, string address, string phoneNo, string email) : base(name, gender, address, phoneNo, email)
-        {
-            NOK_Name = nokName;
-            NOK_PhoneNo = nokPhoneNo;
-        }
         public BloodGroup? BloodGroup { get; set; }
         public string NOK_PhoneNo { get; set; }
         public string NOK_Name { get; set; }

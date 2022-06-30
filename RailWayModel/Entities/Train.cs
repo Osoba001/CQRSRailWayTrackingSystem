@@ -1,4 +1,5 @@
 ﻿using RailWayModelLibrary.Entities.Base;
+using System.ComponentModel.DataAnnotations;
 
 namespace RailWayModelLibrary.Entities
 {
@@ -6,22 +7,17 @@ namespace RailWayModelLibrary.Entities
     {
         public Train()
         {
-
-        }
-        public Train(string name, int capacitiy, Staff engineer, Track track)
-        {
-            Name = name;
-            Capacity = capacitiy;
-            TrailEngineer = engineer;
-            Track = track;
             IsOnTrack = true;
             delay = TimeSpan.Zero;
             TripDate = DateTime.Now;
         }
         public string Name { get; set; }
         public int Capacity { get; set; }
+        [Required]
         public Staff TrailEngineer { get; set; }
+        [Required]
         public Track Track { get; set; }
+        [Required]
         public Station DepartedStation { get; set; }
         private TimeSpan delay;
         public TimeSpan Delay

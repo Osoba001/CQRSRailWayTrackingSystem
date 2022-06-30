@@ -9,10 +9,10 @@ namespace RailWayAppLibrary.Response
 {
     public class BookedTripResponse:EntityBase
     {
-        public string Track { get; set; }
-        public string PickupStation { get; set; }
-        public string pickupStationLocation { get; set; }
-        public string DestinationStation { get; set; }
+        public string? Track { get; set; }
+        public string? PickupStation { get; set; }
+        public string? pickupStationLocation { get; set; }
+        public string? DestinationStation { get; set; }
         public Guid PassengerId { get; set; }
         public DateTime TripDate { get; set; }
         public DateTime DestinationTripArriverTime { get; set; }
