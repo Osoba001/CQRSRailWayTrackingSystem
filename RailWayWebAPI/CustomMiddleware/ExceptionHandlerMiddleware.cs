@@ -29,6 +29,22 @@ namespace RailWayWebAPI.CustomMiddleware
                 context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
                 await context.Response.WriteAsync(e.Message);
             }
+            catch (ArgumentException e)
+            {
+                context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+                await context.Response.WriteAsync(e.Message);
+            }
+            catch (NullReferenceException e)
+            {
+                context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+                await context.Response.WriteAsync(e.Message);
+            }
+            catch (StackOverflowException e)
+            {
+                logger.LogError($"Something went wrong {e}");
+                context.Response.StatusCode = 500;
+                await context.Response.WriteAsync(e.Message);
+            }
             catch (Exception e)
             {
                 logger.LogError($"Something went wrong {e}");

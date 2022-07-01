@@ -1,6 +1,7 @@
 ﻿using RailWayInfrastructureLibrary.Data;
 using RailWayInfrastructureLibrary.Repository.Command.Base;
 using RailWayModelLibrary.Entities;
+using RailWayModelLibrary.Exception;
 using RailWayModelLibrary.Repositories.Command;
 
 namespace RailWayInfrastructureLibrary.Repository.Command
@@ -31,7 +32,7 @@ namespace RailWayInfrastructureLibrary.Repository.Command
                return  await context.SaveChangesAsync();
             }
             else
-                throw new NullReferenceException();
+                throw new DomainNotFoundException("Station does not exist");
         }
     }
 }

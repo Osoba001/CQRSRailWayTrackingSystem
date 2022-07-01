@@ -1,6 +1,7 @@
 ﻿using RailWayInfrastructureLibrary.Data;
 using RailWayInfrastructureLibrary.Repository.Command.Base;
 using RailWayModelLibrary.Entities;
+using RailWayModelLibrary.Exception;
 using RailWayModelLibrary.Repositories.Command;
 using System;
 using System.Collections.Generic;
@@ -33,7 +34,7 @@ namespace RailWayInfrastructureLibrary.Repository.Command
                 context.Update(p);
                 return await context.SaveChangesAsync() > 0;
             }
-            throw new NullReferenceException("Trip not found");
+            throw new DomainNotFoundException("Trip not found");
         }
 
         public async Task SettledTrip(Guid id)

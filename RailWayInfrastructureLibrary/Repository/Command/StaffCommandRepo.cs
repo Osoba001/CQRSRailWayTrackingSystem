@@ -1,6 +1,7 @@
 ﻿using RailWayInfrastructureLibrary.Data;
 using RailWayInfrastructureLibrary.Repository.Command.Base;
 using RailWayModelLibrary.Entities;
+using RailWayModelLibrary.Exception;
 using RailWayModelLibrary.Repositories.Command;
 
 namespace RailWayInfrastructureLibrary.Repository.Command
@@ -28,7 +29,7 @@ namespace RailWayInfrastructureLibrary.Repository.Command
                await  context.SaveChangesAsync();
                 return p;
             }
-            throw new Exception("Staff does not exist.");
+            throw new DomainNotFoundException("Staff does not exist.");
         }
     }
 }

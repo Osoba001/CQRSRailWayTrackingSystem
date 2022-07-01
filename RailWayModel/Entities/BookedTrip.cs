@@ -6,10 +6,6 @@ namespace RailWayModelLibrary.Entities
     
     public class BookedTrip: EntityBase, IBaseModel
     {
-        public BookedTrip()
-        {
-            SettledTrip = false;
-        }
         [Required]
         public Station PickupStation { get; set; }
         [Required]

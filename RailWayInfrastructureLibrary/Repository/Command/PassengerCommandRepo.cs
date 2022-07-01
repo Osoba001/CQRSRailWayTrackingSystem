@@ -2,6 +2,7 @@
 using RailWayInfrastructureLibrary.Data;
 using RailWayInfrastructureLibrary.Repository.Command.Base;
 using RailWayModelLibrary.Entities;
+using RailWayModelLibrary.Exception;
 using RailWayModelLibrary.RailWayEnums;
 using RailWayModelLibrary.Repositories.Command;
 
@@ -32,7 +33,7 @@ namespace RailWayInfrastructureLibrary.Repository.Command
                     return await context.SaveChangesAsync() > 0;
 
                 }
-                else { throw new Exception("Old password is not correct"); }
+                else { throw new ArgumentException("Old password is not correct"); }
             }
             else
             {
@@ -48,11 +49,11 @@ namespace RailWayInfrastructureLibrary.Repository.Command
                         return await context.SaveChangesAsync() > 0;
 
                     }
-                    else { throw new Exception("Old password is not correct"); }
+                    else { throw new ArgumentException("Old password is not correct"); }
                 }
                 else
                 {
-                    throw new Exception("user not found");
+                    throw new DomainNotFoundException("user not found");
                 }
             }
             
@@ -76,7 +77,7 @@ namespace RailWayInfrastructureLibrary.Repository.Command
                 await context.SaveChangesAsync();
                 return p;
             }
-            throw new Exception("Passenger does not exist.");
+            throw new DomainNotFoundException("Passenger does not exist.");
         }
     }
 }

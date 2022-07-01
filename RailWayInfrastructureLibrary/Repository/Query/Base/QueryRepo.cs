@@ -50,7 +50,15 @@ namespace RailWayInfrastructureLibrary.Repository.Query.Base
 
         public async Task<T> GetById(Guid id)
         {
-            return await _context.Set<T>().FirstOrDefaultAsync(x => x.Id == id);
+            try
+            {
+                return await _context.Set<T>().FirstOrDefaultAsync(x => x.Id == id);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
         public bool IsExist(Guid id)
         {
