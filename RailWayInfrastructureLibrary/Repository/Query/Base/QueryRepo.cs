@@ -21,15 +21,7 @@ namespace RailWayInfrastructureLibrary.Repository.Query.Base
        
         public async Task<IEnumerable<T>> FindByPredicate(Expression<Func<T, bool>> predicate)
         {
-            try
-            {
-                return await _context.Set<T>().Where(predicate).ToListAsync();
-            }
-            catch (Exception)
-            {
-
-                throw new Exception();
-            }
+            return await _context.Set<T>().Where(predicate).ToListAsync();
         }
         public async Task<IEnumerable<T>> GetTopN(int n)
         {
@@ -37,28 +29,12 @@ namespace RailWayInfrastructureLibrary.Repository.Query.Base
         }
         public async Task<IEnumerable<T>> GetAll()
         {
-            try
-            {
-               return await _context.Set<T>().ToListAsync();
-            }
-            catch (Exception)
-            {
-
-                throw new Exception();
-            }
+            return await _context.Set<T>().ToListAsync();
         }
 
         public async Task<T> GetById(Guid id)
         {
-            try
-            {
-                return await _context.Set<T>().FirstOrDefaultAsync(x => x.Id == id);
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
+            return await _context.Set<T>().FirstOrDefaultAsync(x => x.Id == id);
         }
         public bool IsExist(Guid id)
         {

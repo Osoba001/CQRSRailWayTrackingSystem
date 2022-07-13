@@ -21,8 +21,8 @@ namespace RailWayAppLibrary.Handlers.QueryHandlers
         {
             var _staff = staff.Login(request.email, request.password);
             var logStaff = mapper.Map<StaffResponse>(_staff.Item1);
-            logStaff.IsSoccess = _staff.Item2;
-            logStaff.Meassage=_staff.Item3;
+            logStaff.IsSuccess = _staff.Item2;
+            logStaff.Message=_staff.Item3;
             return Task.Run(()=> logStaff);
         }
     }

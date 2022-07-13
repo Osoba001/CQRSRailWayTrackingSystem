@@ -15,6 +15,19 @@ namespace RailWayInfrastructureLibrary.Repository.Command
             this.context = context;
         }
 
+        public async  Task UpdateRefreshToken(Guid id, string refreshToken, DateTime expire)
+        {
+            var p = context.Set<Staff>().FirstOrDefault(x => x.Id == id);
+            if (p != null)
+            {
+                p.RefreshToken = refreshToken;
+                p.TokenExpires=expire;
+                p.TokenCreated = DateTime.Now;
+                context.Update(p);
+                await context.SaveChangesAsync();
+            }
+        }
+
         public async Task<Staff> UpdateStaff(Guid id, string address,string phoneNo, string name,string role)
         {
             var p = context.Set<Staff>().FirstOrDefault(x => x.Id == id);

@@ -1,6 +1,5 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RailWayAppLibrary.Commands;
 using RailWayAppLibrary.Queries;
@@ -30,9 +29,9 @@ namespace RailWayWebAPI.Controllers
         public async Task<IActionResult> Login([FromBody] LoginPassenger passenger)
         {
             var _passenger = await mediator.Send(passenger);
-            if (_passenger.IsSoccess)
+            if (_passenger.IsSuccess)
                 return Ok(_passenger);
-            return BadRequest(_passenger.Meassage);
+            return BadRequest(_passenger.Message);
         }
         [HttpPut]
         [Authorize(Roles ="Passenger")]

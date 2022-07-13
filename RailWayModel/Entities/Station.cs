@@ -5,9 +5,9 @@ namespace RailWayModelLibrary.Entities
 {
     public class Station : EntityBase, IBaseModel
     {
-        public Station(int priousIndex)
+        public Station()
         {
-            Index = priousIndex + 1;
+
         }
         [Required]
         public string StationName { get; set; }

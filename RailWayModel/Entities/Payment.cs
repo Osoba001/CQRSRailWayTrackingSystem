@@ -7,7 +7,7 @@ namespace RailWayModelLibrary.Entities
     {
         public Payment()
         {
-            IsAprove = false;
+            
         }
 
         [Required]

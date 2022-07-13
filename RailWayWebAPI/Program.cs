@@ -3,7 +3,9 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using RailWayApp.Utility;
 using RailWayAppLibrary.Utility;
+using RailWayInfrastructure.Authenticate;
 using RailWayInfrastructureLibrary.Authenticate;
 using RailWayInfrastructureLibrary.Data;
 using RailWayInfrastructureLibrary.Dependency;
@@ -17,7 +19,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddDbContext<RailWayDbContext>(option =>
 {
-    option.UseSqlServer(builder.Configuration.GetConnectionString("defaultConnection"));
+    //option.UseSqlServer(builder.Configuration.GetConnectionString("defaultConnection"));
+    option.UseSqlite(builder.Configuration.GetConnectionString("defaultConnection"));
 });
 
 var logger = new LoggerConfiguration()
@@ -28,12 +31,13 @@ builder.Logging.ClearProviders();
 builder.Logging.AddSerilog(logger);
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
-//builder.Services.AddTransient<ExceptionHandlerMiddleware>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.Dependency();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddScoped<IRefreshTokenGeneraror,RefreshTokenGenerator>();
 var key  = builder.Configuration.GetSection("AppSetting:Token").Value;
 
 builder.Services.AddAuthentication(x =>

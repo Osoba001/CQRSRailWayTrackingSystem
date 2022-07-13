@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 namespace RailWayModelLibrary.Entities.Base
 {
     [Index(nameof(Email), IsUnique = true)]
-    [Index(nameof(PhoneNo), IsUnique = true)]
+   
     public class Person: EntityBase
     {
         [Required]
@@ -26,6 +26,10 @@ namespace RailWayModelLibrary.Entities.Base
         public bool IsLock { get; set; }
         public int NTry { get; set; }
         public DateTime LastLogin { get; set; }
+
+        public string? RefreshToken { get; set; }
+        public DateTime TokenCreated { get; set; }
+        public DateTime TokenExpires { get; set; }
 
     }
 }

@@ -17,9 +17,6 @@ namespace RailWayInfrastructureLibrary.Repository.Command.Base
         {
             _context.Set<T>().AddAsync(entity);
         }
-
-
-        
         //Remove
         public void RemoveById(Guid id)
         {
@@ -31,28 +28,12 @@ namespace RailWayInfrastructureLibrary.Repository.Command.Base
         }
         public void RomoveEntity(T entity)
         {
-            try
-            {
-                _context.Set<T>().Remove(entity);
-            }
-            catch (Exception)
-            {
-
-                throw new Exception();
-            }
+            _context.Set<T>().Remove(entity);
         }
         //update
         public void UpdateEntity(T entity)
         {
-            try
-            {
-                _context.Entry(entity).State = EntityState.Modified;
-            }
-            catch (Exception)
-            {
-
-                throw new Exception();
-            }
+            _context.Entry(entity).State = EntityState.Modified;
         }
         public bool IfExist(Expression<Func<T, bool>> predicate)
         {

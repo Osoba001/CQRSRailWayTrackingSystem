@@ -15,7 +15,7 @@ namespace RailWayAppLibrary.Response.Base
         public string? Address { get; set; }
         public string? PhoneNo { get; set; }
         public string? Email { get; set; }
-        public string? Meassage { get; set; }
-        public bool IsSoccess { get; set; }
+        public string? Message { get; set; }
+        public bool IsSuccess { get; set; }
     }
 }

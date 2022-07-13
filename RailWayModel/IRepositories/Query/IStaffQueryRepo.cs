@@ -6,5 +6,6 @@ namespace RailWayModelLibrary.Repositories.Query
     public interface IStaffQueryRepo : IQueryRepo<Staff>
     {
         Tuple<Staff, bool, string> Login(string email, string password);
+        Task<Staff> GetByRefreshToken(string refreshToken);
     }
 }

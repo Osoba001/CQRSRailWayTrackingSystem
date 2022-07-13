@@ -12,6 +12,10 @@ namespace RailWayModelLibrary.Entities
     
     public class Staff: Person, IBaseModel
     {
+        public Staff()
+        {
+
+        }
         [Required]
         public string StaffId { get; set; }
         [Required]

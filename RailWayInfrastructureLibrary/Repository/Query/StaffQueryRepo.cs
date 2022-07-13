@@ -1,4 +1,5 @@
-﻿using RailWayAppLibrary.Queries;
+﻿using Microsoft.EntityFrameworkCore;
+using RailWayAppLibrary.Queries;
 using RailWayAppLibrary.Response;
 using RailWayAppLibrary.Utility;
 using RailWayInfrastructureLibrary.Data;
@@ -19,6 +20,11 @@ namespace RailWayInfrastructureLibrary.Repository.Query
             this.context = context;
             this.authentication = authentication;
             this.escription = escription;
+        }
+
+        public async Task<Staff> GetByRefreshToken(string refreshToken)
+        {
+            return await context.Set<Staff>().FirstOrDefaultAsync(x => x.RefreshToken == refreshToken)?? throw new UnauthorizedAccessException();
         }
 
         public Tuple<Staff,bool, string> Login(string email, string password)

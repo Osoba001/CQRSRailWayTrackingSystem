@@ -33,7 +33,7 @@ namespace RailWayAppLibrary.Handlers.CommandHandlers
                 repo.AddEntity(s);
                await repo.SaveChanges();
                 var pas=  mapper.Map<PassengerResponse>(s);
-                pas.Meassage = authentication.AuthenticatePassenger(s);
+                pas.Message = authentication.AuthenticatePassenger(s);
                 return pas;
             }
             throw new Exception("This email is already in used");

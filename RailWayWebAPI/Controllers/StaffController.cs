@@ -3,8 +3,13 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RailWayApp.Commands.UpdateStaffRefreshToken;
+using RailWayApp.Queries.GetStaffByReshToken;
+using RailWayApp.Response;
+using RailWayApp.Utility;
 using RailWayAppLibrary.Commands;
 using RailWayAppLibrary.Queries;
+using RailWayAppLibrary.Utility;
 
 namespace RailWayWebAPI.Controllers
 {
@@ -14,13 +19,18 @@ namespace RailWayWebAPI.Controllers
     public class StaffController : ControllerBase
     {
         private readonly IMediator mediator;
-        public StaffController(IMediator mediator)
+        private readonly IRefreshTokenGeneraror _refreshToken;
+        private readonly IAuthenticationManager createToken;
+
+        public StaffController(IMediator mediator, IRefreshTokenGeneraror refreshToken, IAuthenticationManager createToken)
         {
             this.mediator = mediator;
-         }
+            _refreshToken = refreshToken;
+            this.createToken = createToken;
+        }
          [HttpPost]
-         [Authorize(Policy="AdminOnly")]
-  
+         //[Authorize(Policy="AdminOnly")]
+        [AllowAnonymous]
         public async Task<IActionResult> CreateStaff([FromBody] CreateStaff staff)
         {
             return Ok(await mediator.Send(staff));
@@ -30,9 +40,21 @@ namespace RailWayWebAPI.Controllers
         public async Task<IActionResult> Login([FromBody] LoginStaff staff)
         {
             var _staff= await mediator.Send(staff);
-            if (_staff.IsSoccess)
-                return Ok(_staff.Meassage);
-            return BadRequest(_staff.Meassage);
+            if (_staff.IsSuccess)
+            {
+                var newRefreshToken = _refreshToken.GenerateRefreshToken();
+                var cookiesOpt = new CookieOptions
+                {
+                    HttpOnly = true,
+                    Expires = newRefreshToken.Expires,
+                };
+                Response.Cookies.Append("refreshToken", newRefreshToken.Token, cookiesOpt);
+                var staf = new UpdateStaffRefreshTokenCommand(_staff.Id, newRefreshToken.Token, newRefreshToken.Expires);
+                await mediator.Send(request: staf);
+                return Ok(_staff.Message);
+            }
+                
+            return BadRequest(_staff.Message);
         }
 
         [HttpPut]
@@ -62,6 +84,34 @@ namespace RailWayWebAPI.Controllers
         {
             return Ok(await mediator.Send(request:new GetAllStaff()));
         }
-       
+        [HttpPost("refresh-token")]
+        public async Task<ActionResult<string>> RefreshToken()
+        {
+            var refreshToken = Request.Cookies["refreshToken"];
+            if (refreshToken == null)
+            {
+                return Unauthorized("UnAuthorize");
+            }
+            var st = await mediator.Send(new StaffByRefreshTokenQuery(refreshToken));
+            if (st.TokenExpires < DateTime.Now)
+            {
+                return Unauthorized("Token expired.");
+            }
+
+            string token = createToken.AuthenticateStaff(st);
+            var newRefreshToken = _refreshToken.GenerateRefreshToken();
+            var cookiesOpt = new CookieOptions
+            {
+                HttpOnly = true,
+                Expires = newRefreshToken.Expires,
+            };
+
+            Response.Cookies.Append("refreshToken", newRefreshToken.Token, cookiesOpt);
+            var staf = new UpdateStaffRefreshTokenCommand(st.Id, newRefreshToken.Token, newRefreshToken.Expires);
+            await mediator.Send(request: staf);
+
+            return Ok(token);
+        }
+        
     }
 }

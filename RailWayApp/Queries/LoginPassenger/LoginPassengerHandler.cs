@@ -20,8 +20,8 @@ namespace RailWayAppLibrary.Handlers.QueryHandlers
         {
             var _psg = passenger.Login(request.email, request.password);
             var psg = mapper.Map<PassengerResponse>(_psg.Item1);
-            psg.IsSoccess = _psg.Item2;
-            psg.Meassage=_psg.Item3;
+            psg.IsSuccess = _psg.Item2;
+            psg.Message=_psg.Item3;
             return Task.Run(() => psg);
         }
     }

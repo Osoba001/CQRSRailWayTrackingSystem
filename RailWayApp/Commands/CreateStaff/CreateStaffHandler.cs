@@ -34,8 +34,8 @@ namespace RailWayAppLibrary.Handlers.CommandHandlers
                 repo.AddEntity(s);
                 await repo.SaveChanges();
                 var st= mapper.Map<StaffResponse>(s);
-                st.Meassage = authentication.AuthenticateStaff(s);
-                st.IsSoccess = true;
+                st.Message = authentication.AuthenticateStaff(s);
+                st.IsSuccess = true;
                 return st;
             }
             throw new Exception("This email is already in used");

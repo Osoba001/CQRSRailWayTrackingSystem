@@ -50,6 +50,7 @@ namespace RailWayWebAPI.CustomMiddleware
                 logger.LogError($"Something went wrong {e}");
                 context.Response.StatusCode = 500;
                 await context.Response.WriteAsync(e.Message);
+                
             }
         }
     }
